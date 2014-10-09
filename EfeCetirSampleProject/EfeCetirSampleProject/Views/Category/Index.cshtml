@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Knockout JS Example</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>controller</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach : AllCategories">
+        <tr>
+            <td data-bind="text: Name"></td>
+            <td data-bind="text: ControllerName"></td>
+            <td data-bind="text: ActionName"></td>
+            <td>
+                <button class="btn-primary" data-bind="click: $root.fillTexts.bind($(this))">
+                    Select
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table">
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            <input data-bind="value: Name" type="text" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Controller Name
+        </td>
+        <td>
+            <input data-bind="value: ControllerName" type="text" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Action Name
+        </td>
+        <td>
+            <input data-bind="value: ActionName" type="text" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="btn-primary" data-bind="click: SendModel.bind($(this))">
+                Send Model
+            </button>
+        </td>
+    </tr>
+</table>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/App/category.js")
+}
