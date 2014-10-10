@@ -20,7 +20,9 @@ which technologies I used?
   - Autofac Integration for Controllers and ApiControllers
   
 if you would like to ask question about anything
-you can access to me by email address : efecan.cetir@outlook.com
+you can access to me by email.
+
+efecan.cetir@outlook.com
 
 
   
